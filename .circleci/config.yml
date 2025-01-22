@@ -10,7 +10,6 @@ jobs:
           name: "Setup"
           command: |
             apk add curl
-            dockerd
       - run:
           name: "Build docker image"
           command: "docker build -t app ."
