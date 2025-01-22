@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Build docker image"
-          command: "docker build -t app ."
+          command: "docker build -t badge9416/app:latest ."
       - run:
           name: "Run docker container"
           command: "docker run -d -p 8080:8080 app"
@@ -22,8 +22,8 @@ jobs:
           name: "Push Docker image"
           command: |
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker tag app:latest $DOCKER_USERNAME/app:latest
-            docker push $DOCKER_USERNAME/app:latest
+            docker tag app:latest badge9416/app:latest
+            docker push badge9416/app:latest
 
 workflows:
   docker-build-workflow:
