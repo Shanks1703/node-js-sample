@@ -3,7 +3,7 @@ name: Docker Build and Publish
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the main branch
+      - master
 
 jobs:
   docker-build:
