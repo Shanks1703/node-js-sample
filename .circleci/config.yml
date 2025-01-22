@@ -22,7 +22,6 @@ jobs:
           name: "Push Docker image"
           command: |
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker tag app:latest badge9416/app:latest
             docker push badge9416/app:latest
 
 workflows:
