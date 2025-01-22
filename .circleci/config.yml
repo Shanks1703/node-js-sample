@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   docker-build:
     machine:
-      - image: cimg/base:2025.01
+      - image: ubuntu-2204:2024.11.1
     steps:
       - checkout
       - run:
