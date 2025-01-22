@@ -7,10 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Setup"
-          command: |
-            apk add curl
-      - run:
           name: "Build docker image"
           command: "docker build -t app ."
       - run:
