@@ -11,7 +11,7 @@ jobs:
           command: "docker build -t badge9416/app:latest ."
       - run:
           name: "Run docker container"
-          command: "docker run -d -p 8080:8080 app"
+          command: "docker run -d -p 8080:8080 badge9416/app:latest"
       - run:
           name: "Wait for docker up"
           command: "sleep 5"
