@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   docker-build:
     docker:
-      - image: node:22.13-alpine
+      - image: docker:stable
     steps:
       - checkout
       - run:
